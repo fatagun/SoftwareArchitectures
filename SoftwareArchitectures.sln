@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubSub", "PubSub\PubSub.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayeredArchitecture", "LayeredArchitecture\LayeredArchitecture.csproj", "{907DA399-617A-4721-82E7-3D2C09F47B9F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventDriven", "EventDriven", "{75A49096-28CA-43AA-AE20-1EB655F16368}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Layered", "Layered", "{AF66C382-390D-42E1-8AC7-F2EB446B43F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +29,10 @@ Global
 		{907DA399-617A-4721-82E7-3D2C09F47B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{907DA399-617A-4721-82E7-3D2C09F47B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{907DA399-617A-4721-82E7-3D2C09F47B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F38C800-253A-4021-B890-DBBB0D025B2A} = {75A49096-28CA-43AA-AE20-1EB655F16368}
+		{AC184A5E-DF5E-434B-ABA5-8C0C0DB5D323} = {75A49096-28CA-43AA-AE20-1EB655F16368}
+		{907DA399-617A-4721-82E7-3D2C09F47B9F} = {AF66C382-390D-42E1-8AC7-F2EB446B43F1}
 	EndGlobalSection
 EndGlobal
