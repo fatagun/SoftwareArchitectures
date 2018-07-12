@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{907DA399-617A-4721-82E7-3D2C09F47B9F}|Default">
+  <MonoDevelop.Ide.ItemProperties.PubSub PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LayeredArchitecture/Persistence/CustomerRepository.cs">
+    <Files>
+      <File FileName="LayeredArchitecture/Views/Home/Details.cshtml" Line="10" Column="29" />
+      <File FileName="LayeredArchitecture/Views/Home/Create.cshtml" Line="16" Column="52" />
+      <File FileName="LayeredArchitecture/Views/Home/Index.cshtml" Line="30" Column="66" />
+      <File FileName="LayeredArchitecture/Controllers/HomeController.cs" Line="51" Column="1" />
+      <File FileName="LayeredArchitecture/Services/CustomerService.cs" Line="46" Column="1" />
+      <File FileName="LayeredArchitecture/Persistence/CustomerRepository.cs" Line="50" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PoormansEventProcessing PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/firat/Projects/SoftwareArchitectures/LayeredArchitecture/Startup.cs" relfile="LayeredArchitecture/Startup.cs" line="44" column="1" />
+      <Breakpoint enabled="false" file="/Users/firat/Projects/SoftwareArchitectures/LayeredArchitecture/Startup.cs" relfile="LayeredArchitecture/Startup.cs" line="39" column="1" />
+      <Breakpoint file="/Users/firat/Projects/SoftwareArchitectures/LayeredArchitecture/Controllers/HomeController.cs" relfile="LayeredArchitecture/Controllers/HomeController.cs" line="51" column="1" />
+      <Breakpoint file="/Users/firat/Projects/SoftwareArchitectures/LayeredArchitecture/Controllers/HomeController.cs" relfile="LayeredArchitecture/Controllers/HomeController.cs" line="49" column="1" />
+      <Breakpoint file="/Users/firat/Projects/SoftwareArchitectures/LayeredArchitecture/Controllers/HomeController.cs" relfile="LayeredArchitecture/Controllers/HomeController.cs" line="44" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.LayeredArchitecture PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

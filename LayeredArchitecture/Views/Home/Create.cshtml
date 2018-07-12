@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Create Customer";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Customers</h2>
+        <form asp-controller="Home" asp-action="Create" method="post">
+
+            Name: <input type="text" id="Name" name="Name" value="" /> <br>
+            Last Name: <input type="text" id="Lastname" name="Lastname" value="" /> <br>
+            Favorite Drink: <input type="text" id="FavoriteDrink" name="FavoriteDrink" value="" /> <br>
+            Age: <input type="text" id="Age" name="Age" value="" /> <br>
+            Company: <input type="text" id="Company" name="Company" value="" /> <br>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
