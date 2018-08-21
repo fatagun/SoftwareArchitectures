@@ -13,11 +13,8 @@ namespace PoormansEventProcessing
 
 			var impls = serviceLocator.GetService<IHandler<RandomEvent>>();
 
-
 			RunParallel(impls);
-			RunSequential(impls);
-
-
+            RunSequential(impls);
 
             Console.WriteLine("The end!");
         }
@@ -37,7 +34,6 @@ namespace PoormansEventProcessing
             }
         }
     }
-
 
 
 	class ServiceLocator
