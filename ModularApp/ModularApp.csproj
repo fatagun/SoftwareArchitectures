@@ -6,6 +6,7 @@
 
 
   <ItemGroup>
+    <Folder Include="Modules\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   
@@ -15,7 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Customer\Customer.csproj" /> 
+    <ProjectReference Include="..\Infra\Infra.csproj" />
+    <ProjectReference Include="..\Modular.Domain\Modular.Domain.csproj" />
+    <ProjectReference Include="..\Modules\Customer\Customer.csproj" /> 
   </ItemGroup>
 
 

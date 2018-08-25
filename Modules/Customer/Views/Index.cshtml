@@ -1,18 +1,18 @@
-﻿@using Slices.Features.Customer;
-
+﻿@using Modular.Domain
 @model IEnumerable<Customer>
+
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="row">
-    <br/>
-    <div class="col-md-12">
-        <a href="/Customer/create" class="btn btn-primary">Create customer</a>
-    </div> 
-</div>
 
-<div class="row"> 
+<div class="row">
+    <div class="col-md-12">
+        <h2>Hello from Customer Module</h2>
+    </div>
+</div> 
+
+<div class="row">
     <div class="col-md-12">
         <h2>Customers</h2>
         <table class="table">
@@ -39,3 +39,4 @@
     </div>
 
 </div>
+
