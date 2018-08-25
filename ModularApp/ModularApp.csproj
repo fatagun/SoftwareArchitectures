@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework> 
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="OrchardCore.Application.Mvc.Targets" Version="1.0.0-beta1-3667" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Customer\Customer.csproj" /> 
+  </ItemGroup>
+
+
+</Project>

@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LayeredArchitecture.Domain;
-using LayeredArchitecture.Persistence;
-using LayeredArchitecture.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,8 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Slices.Infra;
 
-namespace LayeredArchitecture
+namespace Slices
 {
     public class Startup
     {
@@ -31,17 +29,19 @@ namespace LayeredArchitecture
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => false;
+                options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-			services.AddDbContext<ApplicationContext>(option => option.UseInMemoryDatabase("Customer"));
+            services.AddDbContext<ApplicationContext>(option => option.UseInMemoryDatabase("customer"));
 
-			services.AddScoped<IRepository<Customer>, CustomerRepository>();
-			services.AddScoped<ICustomerService, CustomerService>();
+            services.AddMvc(o => o.Conventions.Add(new FeatureConvention()))
+                .AddRazorOptions(options =>
+                {
+                    options.ConfigureFeatureFolders();
+                    // options.ConfigureFeatureFoldersSideBySideWithStandardViews();
 
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

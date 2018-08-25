@@ -1,0 +1,38 @@
+﻿@using Slices.Features.Customer;
+
+@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <br/>
+    <div class="col-md-12">
+        <a href="/Customer/create" class="btn btn-primary">Create customer</a>
+    </div>
+    <div class="col-md-12">
+        <h2>Customers</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Last name</td>
+                    <td>Details</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var customer in Model)
+                {
+                    <tr>
+                        <td>@customer.Id</td>
+                        <td>@customer.Name</td>
+                        <td>@customer.Lastname</td>
+                        <td><a href="/customer/details/@customer.Id">Details</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
