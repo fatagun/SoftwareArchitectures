@@ -18,8 +18,8 @@ namespace MediatorApi.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<GetCustomerResponse>> Get(GetCustomerRequest request) => await _mediator.Send(request);
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<GetCustomerResponse>> Get([FromRoute]GetCustomerRequest request) => await _mediator.Send(request);
 
         [HttpGet]
         public async Task<IEnumerable<GetCustomerResponse>> Get(GetCustomersRequest request) => await _mediator.Send(request);

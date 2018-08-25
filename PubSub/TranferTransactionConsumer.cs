@@ -4,14 +4,8 @@ using PubSub.Events.Model;
 namespace PubSub
 {
 	public class TranferTransactionConsumer : IConsumer<Event<Transfer>>
-    {
-		// inject Customer sender, Customer receiver
-        public TranferTransactionConsumer()
-        {
-			Order = 1;
-        }
-
-		public int Order { get; }
+    {  
+        public int Order  => 1;
 
 		public void Handle(Event<Transfer> eventMessage)
 		{ 

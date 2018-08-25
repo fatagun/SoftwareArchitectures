@@ -10,11 +10,12 @@ namespace PubSub
 			ISubscriberService subscriberService = new SubscriberService();
 			IEventPublisher eventPublisher = new EventPublisher(subscriberService);
 
-			Transfer transfer = new Transfer(10.0m, "firat", "hilmi");
+			Transfer transfer = new Transfer(120000.0m, "Trump", "Stormy");
 
 			eventPublisher.Publish(new Event<Transfer>(transfer));
 
             Console.WriteLine("The end.");
+            Console.Read();
         }
     }
 }

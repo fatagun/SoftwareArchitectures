@@ -17,6 +17,7 @@ namespace PoormansEventProcessing
             RunSequential(impls);
 
             Console.WriteLine("The end!");
+            Console.Read();
         }
 
 		public static void RunParallel(IList<IHandler<RandomEvent>> impls)
