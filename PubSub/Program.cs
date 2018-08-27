@@ -10,7 +10,7 @@ namespace PubSub
 			ISubscriberService subscriberService = new SubscriberService();
 			IEventPublisher eventPublisher = new EventPublisher(subscriberService);
 
-			Transfer transfer = new Transfer(120000.0m, "Trump", "Stormy");
+            Transfer transfer = new Transfer(120000.0m, "Bob", "Alice");
 
 			eventPublisher.Publish(new Event<Transfer>(transfer));
 

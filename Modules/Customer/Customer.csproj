@@ -10,6 +10,8 @@
   <ItemGroup>
     <None Remove="Views\_ViewImports.cshtml" />
     <None Remove="Views\_ViewStart.cshtml" />
+    <None Remove="Views\Create.cshtml" />
+    <None Remove="Views\Details.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,6 +20,14 @@
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Include="Views\_ViewStart.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Include="Views\Create.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Include="Views\Details.cshtml">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

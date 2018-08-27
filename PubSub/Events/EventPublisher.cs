@@ -3,6 +3,9 @@ using System.Linq;
 
 namespace PubSub
 {
+    /// <summary>
+    /// Publishes events to registered subscribers
+    /// </summary>
     public class EventPublisher : IEventPublisher
     {
 		private readonly ISubscriberService _subscriberService; 
@@ -15,6 +18,8 @@ namespace PubSub
         public virtual void Publish<T>(T message)
         {
 			var subscribers = _subscriberService.GetSubscribers<T>();
+
+            //Can run in sequential or parallel mode. 
 
 			foreach(var subscriber in subscribers.OrderBy(s=>s.Order))
 			{

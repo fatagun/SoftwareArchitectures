@@ -11,7 +11,7 @@ namespace PoormansEventProcessing
         {
 			ServiceLocator serviceLocator = new ServiceLocator();
 
-			var impls = serviceLocator.GetService<IHandler<RandomEvent>>();
+            var impls = serviceLocator.GetService<IHandler<SomeEvent>>();
 
 			RunParallel(impls);
             RunSequential(impls);
@@ -20,18 +20,18 @@ namespace PoormansEventProcessing
             Console.Read();
         }
 
-		public static void RunParallel(IList<IHandler<RandomEvent>> impls)
+        public static void RunParallel(IList<IHandler<SomeEvent>> impls)
         {
 			Console.WriteLine("Running in parallel mode.");
-            Parallel.ForEach(impls, (impl) => impl.Handle(new RandomEvent("hi!")));
+            Parallel.ForEach(impls, (impl) => impl.Handle(new SomeEvent("hello world!")));
         }
 
-        public static void RunSequential(IList<IHandler<RandomEvent>> impls)
+        public static void RunSequential(IList<IHandler<SomeEvent>> impls)
         {
 			Console.WriteLine("Running in sequential mode.");
             foreach (var impl in impls)
             {
-                impl.Handle(new RandomEvent("hello"));
+                impl.Handle(new SomeEvent("hello"));
             }
         }
     }
@@ -39,7 +39,7 @@ namespace PoormansEventProcessing
 
 	class ServiceLocator
     {
-        private IDictionary<object, IList<object>> _services;
+        IDictionary<object, IList<object>> _services;
 
         public ServiceLocator()
         {

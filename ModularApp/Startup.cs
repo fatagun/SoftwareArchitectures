@@ -65,12 +65,6 @@ namespace ModularApp
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            var context = serviceProvider.GetService<ApplicationContext>();
-
-            context.Customers.Add(new Customer { Id = 1, Age = 24, Company = "Yahoo!", FavoriteDrink = "tea", Name = "John", Lastname = "Doe" });
-            context.Customers.Add(new Customer { Id = 2, Age = 25, Company = "IBM", FavoriteDrink = "latte", Name = "Jane", Lastname = "Doe" });
-            context.SaveChanges();
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

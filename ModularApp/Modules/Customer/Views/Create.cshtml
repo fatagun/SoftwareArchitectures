@@ -1,0 +1,44 @@
+@using Modular.Domain
+@model Customer
+@{
+    ViewData["Title"] = "Create Customer";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>New Customer</h2>
+        <div class="col-md-12">
+            <form asp-controller="Customer" asp-action="Create" method="post">
+
+                <div class="form-group">
+                    <label class="form-label" asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" asp-for="Lastname"></label>
+                    <input asp-for="Lastname" class="form-control" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" asp-for="FavoriteDrink"></label>
+                    <input asp-for="FavoriteDrink" class="form-control" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" asp-for="Age"></label>
+                    <input asp-for="Age" class="form-control" autocomplete="off" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" asp-for="Company"></label>
+                    <input asp-for="Company" class="form-control" autocomplete="off" />
+                </div>
+
+                <div class="card-footer text-right">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

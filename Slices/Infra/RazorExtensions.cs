@@ -8,7 +8,10 @@ namespace Slices.Infra
 {
     public static class RazorExtensions
     {
-
+        /// <summary>
+        /// Configures the feature folders.
+        /// </summary>
+        /// <param name="options">Options.</param>
         public static void ConfigureFeatureFolders(this RazorViewEngineOptions options)
         {
             // {0} - Action

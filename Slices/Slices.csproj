@@ -20,4 +20,7 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models\ErrorViewModel.cs" />
+  </ItemGroup>
 </Project>

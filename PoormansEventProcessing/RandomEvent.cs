@@ -1,9 +1,9 @@
 ﻿using System;
 namespace PoormansEventProcessing
 {
-    public class RandomEvent
+    public class SomeEvent
     {
-        public RandomEvent(string message)
+        public SomeEvent(string message)
         {
 			Message = message;
         }
@@ -17,26 +17,26 @@ namespace PoormansEventProcessing
         void Handle(T item);
     }
     
-    public class Handler1 : IHandler<RandomEvent>
+    public class Handler1 : IHandler<SomeEvent>
     {
 
-        public void Handle(RandomEvent randomEvent)
+        public void Handle(SomeEvent randomEvent)
         {
             Console.WriteLine("From Handler 1 : {0}", randomEvent.Message);
         }
     }
 
-    public class Handler2 : IHandler<RandomEvent>
+    public class Handler2 : IHandler<SomeEvent>
     {
-		public void Handle(RandomEvent randomEvent)
+        public void Handle(SomeEvent randomEvent)
         {
 			Console.WriteLine("From Handler 2 : {0}", randomEvent.Message);
         }
     }
 
-    public class Handler3 : IHandler<RandomEvent>
+    public class Handler3 : IHandler<SomeEvent>
     {
-		public void Handle(RandomEvent randomEvent)
+        public void Handle(SomeEvent randomEvent)
         {
 			Console.WriteLine("From Handler 3 : {0}", randomEvent.Message);
         }
